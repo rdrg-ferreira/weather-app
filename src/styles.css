@@ -1,0 +1,118 @@
+:root {
+    --primary-color: rgb(98, 98, 224);
+    --text-color: rgb(248, 244, 244);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 500px;
+    color: var(--text-color);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.item-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.invisible {
+    display: none;
+}
+
+body > div {
+    width: 50%;
+    height: 400px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 24px;
+    gap: 12px;
+}
+
+#location-input {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    width: 250px;
+}
+
+form > input[type="submit"] {
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    padding: 8px;
+    color: var(--text-color);
+}
+
+form > input[type="submit"]:hover, #change-temp-metric > button:hover {
+    filter: brightness(0.9);
+}
+
+#change-temp-metric {
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+    width: 80px;
+    gap: 2px;
+    background-color: var(--text-color);
+}
+
+#change-temp-metric > button {
+    border: none;
+    background-color: var(--primary-color);
+    flex-grow: 1;
+    height: 100%;
+    color: var(--text-color);
+}
+
+main {
+    margin-top: 12px;
+    flex-grow: 1;
+    gap: 12px;
+}
+
+.left, .right {
+    gap: 4px;
+    flex-grow: 1;
+}
+
+.right {
+    justify-content: center;
+    align-items: start;
+}
+
+#icon {
+    height: 100px;
+}
+
+#temp {
+    font-size: 3rem;
+}
+
+.left > *, .right > * {
+    font-size: 1.2rem;
+}
+
+.title {
+    font-size: 2rem;
+    gap: 12px;
+}

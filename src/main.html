@@ -7,46 +7,47 @@
     <link rel="stylesheet" href="./styles.css">
     <script src="./index.js" defer></script>
 </head>
-<body class="relative">
-    <div class="flex flex-column absolute">
-        <div>
+<body class="flex item-center">
+    <div class="flex flex-column">
+        <div class="flex space-between">
             <form action="" method="get">
                 <input type="text" name="location" id="location-input" required placeholder="Search a location...">
                 <input type="submit" value="Search">
             </form>
-            <div id="change-temp-metric" class="flex">
+            <div id="change-temp-metric" class="flex item-center">
                 <button>°C</button>
-                <div class="separator">|</div>
                 <button>°F</button>
             </div>
         </div>
-        <main class="flex invisible">
-            <div class="left flex flex-column">
-                <img src="#" alt="" id="icon">
-                <div id="temp" class="temp">
-                    <span class="value"></span>
-                    <span class="metric">°C</span>
-                </div>
-                <div id="info flex">
-                    <span id="address"></span>
-                    <span id="time"></span>
-                </div>
+        <main class="flex flex-column">
+            <div class="flex title item-center">
+                <span id="address"></span>
+                <span>|</span>
+                <span id="time"></span>
             </div>
-            <div class="right flex flex-column">
-                <div id="feelslike" class="temp">
-                    <span class="text">Feelslike: </span>
-                    <span class="value"></span>
-                    <span class="metric">°C</span>
+            <div class="flex item-center" style="flex-grow: 1;">
+                <div class="left flex item-center">
+                    <div id="temp" class="temp">
+                        <span class="value"></span>
+                        <span class="metric">°C</span>
+                    </div>
                 </div>
-                <div id="humidity">
-                    <span class="text">Humidity: </span>
-                    <span class="value"></span>
-                    <span class="metric">%</span>
-                </div>
-                <div id="wind-speed">
-                    <span class="text">Wind Speed: </span>
-                    <span class="value"></span>
-                    <span class="metric">km/h</span>
+                <div class="right flex flex-column">
+                    <div id="feelslike" class="temp">
+                        <span class="text">Feelslike: </span>
+                        <span class="value"></span>
+                        <span class="metric">°C</span>
+                    </div>
+                    <div id="humidity">
+                        <span class="text">Humidity: </span>
+                        <span class="value"></span>
+                        <span class="metric">%</span>
+                    </div>
+                    <div id="wind-speed">
+                        <span class="text">Wind Speed: </span>
+                        <span class="value"></span>
+                        <span class="metric">km/h</span>
+                    </div>
                 </div>
             </div>
         </main>

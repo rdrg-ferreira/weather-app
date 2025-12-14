@@ -20,7 +20,6 @@ function createApp() {
             feelslike: data.currentConditions.feelslike,
             humidity: data.currentConditions.humidity,
             windspeed: data.currentConditions.windspeed,
-            conditions: data.currentConditions.conditions,
             datetime: data.currentConditions.datetime
         }
     }
@@ -65,10 +64,6 @@ const screen = (function () {
     }
 
     const updateDisplay = (data) => {
-        // icon
-        const icon = document.querySelector("#icon");
-        // TODO add src and alt
-
         // temp
         const temp = document.querySelector("#temp > .value");
         if (currentMetric === "F") data.temp = data.temp * (9/5) + 32;
@@ -84,6 +79,7 @@ const screen = (function () {
 
         // feelslike
         const feelslike = document.querySelector("#feelslike > .value");
+        if (currentMetric === "F") data.feelslike = data.feelslike * (9/5) + 32;
         feelslike.textContent = data.feelslike;
 
         // humidity
