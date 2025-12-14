@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./index.js" defer></script>
+</head>
+<body class="relative">
+    <div class="flex flex-column absolute">
+        <div>
+            <form action="" method="get">
+                <input type="text" name="location" id="location-input" required placeholder="Search a location...">
+                <input type="submit" value="Search">
+            </form>
+            <div id="change-temp-metric" class="flex">
+                <button>°C</button>
+                <div class="separator">|</div>
+                <button>°F</button>
+            </div>
+        </div>
+        <main class="flex invisible">
+            <div class="left flex flex-column">
+                <img src="#" alt="" id="icon">
+                <div id="temp" class="temp">
+                    <span class="value"></span>
+                    <span class="metric">°C</span>
+                </div>
+                <div id="info flex">
+                    <span id="address"></span>
+                    <span id="time"></span>
+                </div>
+            </div>
+            <div class="right flex flex-column">
+                <div id="feelslike" class="temp">
+                    <span class="text">Feelslike: </span>
+                    <span class="value"></span>
+                    <span class="metric">°C</span>
+                </div>
+                <div id="humidity">
+                    <span class="text">Humidity: </span>
+                    <span class="value"></span>
+                    <span class="metric">%</span>
+                </div>
+                <div id="wind-speed">
+                    <span class="text">Wind Speed: </span>
+                    <span class="value"></span>
+                    <span class="metric">km/h</span>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
